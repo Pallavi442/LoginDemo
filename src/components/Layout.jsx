@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Dashboard from "./Dashboard";
 import LoginForm from "./LoginForm";
+
 function Layout() {
   return (
     <>
@@ -10,7 +11,7 @@ function Layout() {
         <div>
             <Routes>
               <Route path="/" element={<LoginForm />} />
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard" element={<Dashboard/>} />
            
             </Routes>
         </div>
