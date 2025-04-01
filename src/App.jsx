@@ -6,12 +6,13 @@ import { useState } from 'react'
 // import logoImg2 from './assets/TalentSift.png'
 // import Dashboard from './Dashboard'
 import LoginForm from './components/LoginForm'
+import Layout from './components/Layout'
 
 
 function App() {
   return (
     <>
-   <LoginForm/>
+   <Layout/>
     </>
   )
 }
