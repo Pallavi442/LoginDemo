@@ -1,90 +1,80 @@
-import React, { useState } from 'react';
+import React from 'react';
 import au_logo from '../assets/au_logo.png';
 import au_logo2 from '../assets/au_logo2.png';
-import hamburger from '../assets/hamburger.png';
 
 const Dashboard = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <div>
-      {/* Navbar */}
-      <div className='flex justify-between items-center bg-amber-50 p-3'>
-        {/* Left Navigation */}
-        <div className='hidden md:flex gap-5'>
-          <p>Personal</p>
-          <p>Premium</p>
-          <p>Business</p>
+      <div className='flex place-content-between bg-amber-50 p-3'>
+        <div className='flex gap-5'>
+            <p>Personal</p>
+            <p>Premium</p>
+            <p>Business</p>
         </div>
 
-        {/* Right Navigation */}
-        <div className='hidden md:flex gap-5'>
-          <p>About Us</p>
-          <p>Investor</p>
-          <p>Careers</p>
-          <p>Debit Card Services</p>
+        <div className='flex gap-5'>
+            <p>About US</p>
+            <p>Investor</p>
+            <p>Careers</p>
+            <p>Debit Card Services</p>
+            <p>Debit Card Services</p>
         </div>
+        {/* <div className='flex gap-3'>
+          <div><img src={logoImg2}/></div>
+          <div className='flex gap-[20px] items-center pl-[20px]'>
+            <img src={hamburger} className='items-center'/>
+            <input className='border border-gray-500'/>
+          </div>
+        
+        </div>
+        <div className='flex'>
+            <h3>Welcome User</h3>
+            <img src={User} className='items-center' />
+        </div> */}
 
-        {/* Hamburger Menu Button (Left) */}
-        <button onClick={() => setMenuOpen(!menuOpen)} className='md:hidden'>
-          <img src={hamburger} alt='Menu' className='w-8 h-8' />
-        </button>
+
       </div>
+      <div className='flex justify-between'>
+       <div className='flex'>
+        <div>
+           <img src={au_logo} className="max-w-full max-h-full" alt="auLogo" />
+        </div>
+        <div>
+           <img src={au_logo2} className="max-w-full max-h-full" alt="auLogo" />
+        </div>
+        </div>
+    <div className='flex gap-5'>
+        <div className='flex gap-5 p-2 '>
+            <p>AU 101</p>
+            <p>Accounts</p>
+            <p>Cards</p>
+            <p>Loans</p>
+            <p>Blogs</p>
+            <p>Offers</p>
+            <p>Insurance</p>
+            <p>Insurance</p>
+            <p>Investment</p>
+            <p>Fincare</p>
+        </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className='md:hidden flex flex-col items-center bg-amber-100 p-3 space-y-3'>
-          <p>Personal</p>
-          <p>Premium</p>
-          <p>Business</p>
-          <p>About Us</p>
-          <p>Investor</p>
-          <p>Careers</p>
-          <p>Debit Card Services</p>
-        </div>
-      )}
+<div className="flex gap-5">
+  <div className="w-max">
+    <button className="w-max mt-2 bg-[#f56403] text-white py-2 px-4 rounded-md">
+      Make Payment
+    </button>
+  </div>
+  <div className="w-max ml-2">
+    <button className="w-max mt-2 bg-[#f56403] text-white py-2 px-4 rounded-md">
+      Login
+    </button>
+  </div>
+</div>
 
-      <div className='flex flex-wrap justify-between items-center p-3'>
-        <button onClick={() => setMenuOpen(!menuOpen)} className='md:hidden'>
-          <img src={hamburger} alt='Menu' className='w-8 h-8' />
-        </button>
-        <div className='flex gap-3'>
-          <img src={au_logo} className='w-24' alt='AU Logo' />
-          <img src={au_logo2} className='w-24' alt='AU Logo 2' />
         </div>
-        <div className='hidden md:flex gap-5 p-2'>
-          <p>AU 101</p>
-          <p>Accounts</p>
-          <p>Cards</p>
-          <p>Loans</p>
-          <p>Blogs</p>
-          <p>Offers</p>
-          <p>Insurance</p>
-          <p>Investment</p>
-          <p>Fincare</p>
-        </div>
-        <div className='hidden md:flex gap-3'>
-          <button className='bg-[#f56403] text-white py-2 px-4 rounded-md'>Make Payment</button>
-          <button className='bg-[#f56403] text-white py-2 px-4 rounded-md'>Login</button>
-        </div>
+  
       </div>
-      {menuOpen && (
-        <div className='md:hidden flex flex-col items-center bg-amber-100 p-3 space-y-3'>
-          <p>AU 101</p>
-          <p>Accounts</p>
-          <p>Cards</p>
-          <p>Loans</p>
-          <p>Blogs</p>
-          <p>Offers</p>
-          <p>Insurance</p>
-          <p>Investment</p>
-          <p>Fincare</p>
-          <button className='bg-[#f56403] text-white py-2 px-4 rounded-md'>Make Payment</button>
-          <button className='bg-[#f56403] text-white py-2 px-4 rounded-md'>Login</button>
-        </div>
-      )}
     </div>
-  );
-};
+  )
+}
 
-export default Dashboard;
+export default Dashboard
